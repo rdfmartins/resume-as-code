@@ -29,17 +29,6 @@ Toda vez que o Scanner avalia uma vaga, ele registra os dados num arquivo CSV. I
 
 ---
 
-## 🛣️ Visão para Open Source (Next Steps)
-
-Este ecossistema já tem maturidade conceitual para se tornar um repositório Open Source (ex: `career-ops-cli` ou `reality-check-cv`). 
-
-Para empacotarmos isso para a comunidade, os próximos passos arquiteturais seriam:
-
-1. **Repositório Centralizado:** Criar um repositório no GitHub contendo os três componentes.
-2. **Setup Automatizado (`Makefile` ou `setup.sh`):** Para o usuário clonar e rodar algo como `make install` para baixar o `md-to-pdf` e configurar permissões.
-3. **Parametrização do Scanner:** Permitir que o usuário passe seu próprio arquivo `meus_pesos.json` para o `cv_scanner.py`, para que um Desenvolvedor Front-end possa usar a mesma ferramenta para fugir de vagas legadas de backend.
-4. **Motor de Match Dinâmico:** Evoluir o Scanner para cruzar a `vaga.txt` com o `master_cv.yaml` e calcular o "% de Match", gerando um "Path of the Pivot" (o que a pessoa precisa estudar para fechar a vaga).
-5. **Templates Markdown:** Disponibilizar uns 3 templates padrão de `.md` para diferentes perfis (O Arquiteto, O DevSecOps, O SRE).
 
 ## 💡 Princípio de Design (Para a comunidade)
 *"Seu currículo é um deploy da sua vivência. A vaga é o ambiente de produção. Não tente fazer deploy de um container Linux num IIS Server. Use o Scanner."*
