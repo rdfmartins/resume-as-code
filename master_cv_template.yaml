@@ -1,0 +1,26 @@
+summary:
+  cloud: >
+    Engenheiro Cloud e DevOps com foco em automação, infraestrutura como código (Terraform)
+    e otimização de recursos (FinOps).
+
+skills:
+  cloud_infra: ["AWS (EC2, VPC, S3)", "Terraform", "Linux", "Docker"]
+  automation_dev: ["Python", "Shell Script"]
+  observability_net: ["CloudWatch", "Grafana"]
+
+experiences:
+  - company: "Nome da Empresa"
+    role: "Cargo / Função"
+    period: "Mês/Ano - Presente"
+    tags: ["cloud", "automacao", "devops"]
+    bullets:
+      - "Descreva sua responsabilidade principal aqui com foco em impacto."
+      - "Descreva outra responsabilidade técnica (ex: CI/CD, IaC)."
+
+formacao:
+  - titulo: "Bacharelado em Ciência da Computação"
+    instituicao: "Universidade de Tecnologia"
+    periodo: "2018 - 2022"
+
+certificacoes:
+  - "AWS Certified Cloud Practitioner"

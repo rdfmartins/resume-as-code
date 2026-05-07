@@ -1,0 +1,15 @@
+# Ignorar arquivos gerados e pessoais
+*.pdf
+vaga*.txt
+cv_*.md
+master_cv.yaml
+cv_analytics.csv
+.careeropsrc
+
+# Node / dependências caso usem md-to-pdf via npm install local
+node_modules/
+package-lock.json
+
+# Cache e artefatos do Python
+__pycache__/
+*.pyc
