@@ -31,11 +31,6 @@ Toda vez que o Scanner avalia uma vaga, ele registra os dados num arquivo CSV. I
 ---
 
 
-## 💡 Princípio de Design (Para a comunidade)
-*"Seu currículo é um deploy da sua vivência. A vaga é o ambiente de produção. Não tente fazer deploy de um container Linux num IIS Server. Use o Scanner."*
-
----
-
 ## 🚀 Como Usar
 
 ### 0. Pré-requisitos
@@ -76,3 +71,8 @@ chmod +x generate_pdf.sh
 ./generate_pdf.sh cv_cloud_jr.md
 ```
 > O motor unirá o seu Markdown com o nosso `cv_style.css` (Design System Gold Standard com prevenção de quebra de páginas) e fará o build do arquivo PDF final pronto para envio. Os logs da renderização ficarão em `pdf_generation.log`.
+
+---
+
+## 💡 Princípio de Design (Para a comunidade)
+*"Seu currículo é um deploy da sua vivência. A vaga é o ambiente de produção. Não tente fazer deploy de um container Linux num IIS Server. Use o Scanner."*
