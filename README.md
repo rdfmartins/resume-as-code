@@ -33,3 +33,30 @@ Toda vez que o Scanner avalia uma vaga, ele registra os dados num arquivo CSV. I
 
 ## 💡 Princípio de Design (Para a comunidade)
 *"Seu currículo é um deploy da sua vivência. A vaga é o ambiente de produção. Não tente fazer deploy de um container Linux num IIS Server. Use o Scanner."*
+
+---
+
+## 🚀 Como Usar (Getting Started)
+
+### 0. Pré-requisitos
+Para o pipeline funcionar localmente, você precisa ter instalado:
+- **Python 3.x** (Para o Reality Check Scanner)
+- **Node.js e NPM** (Para o motor de geração de PDF via `npx`)
+
+### 1. The Reality Check (Scanner de Vagas)
+Antes de escrever uma linha no currículo, avalie a vaga. Salve a descrição da vaga em um arquivo texto (ex: `vaga_itau.txt`) e rode o linter:
+```bash
+python3 cv_scanner.py vaga_itau.txt
+```
+> O script avaliará a vaga em Tiers, exibirá o veredicto no terminal e gravará os dados no seu `cv_analytics.csv` para acompanhamento de FinOps pessoal.
+
+### 2. The Single Source of Truth
+Utilize o `master_cv_template.yaml` como a base central e inalterável da sua carreira. Toda vez que precisar criar um currículo novo, extraia os dados desse YAML e crie um arquivo `.md` específico para a vaga aprovada no passo 1.
+
+### 3. Build & Deploy (Gerando o PDF)
+Com o seu arquivo Markdown específico pronto (ex: `cv_cloud_jr.md`), ative o motor de compilação:
+```bash
+chmod +x generate_pdf.sh
+./generate_pdf.sh cv_cloud_jr.md
+```
+> O motor unirá o seu Markdown com o nosso `cv_style.css` (Design System Gold Standard com prevenção de quebra de páginas) e fará o build do arquivo PDF final pronto para envio. Os logs da renderização ficarão em `pdf_generation.log`.
