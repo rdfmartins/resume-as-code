@@ -11,8 +11,8 @@ INPUT_FILE="$1"
 OUTPUT_FILE="${INPUT_FILE%.md}.pdf"
 
 echo "Iniciando o motor de renderização PDF..."
-npx -y md-to-pdf "$INPUT_FILE" --launch-options '{ "args": ["--no-sandbox", "--disable-setuid-sandbox"] }' > /dev/null 2>&1
-
+CSS_FILE="./cv_style.css"
+npx -y md-to-pdf "$INPUT_FILE" --stylesheet "$CSS_FILE" --launch-options '{ "args": ["--no-sandbox", "--disable-setuid-sandbox"] }' > pdf_generation.log 2>&1
 if [ $? -eq 0 ]; then
   echo "[OK] PDF gerado com sucesso: $OUTPUT_FILE"
 else
