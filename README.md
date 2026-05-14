@@ -1,5 +1,8 @@
 # Resume-as-Code (RaC): The Reality Check Pipeline 🚀
 
+<img width="996" height="483" alt="image" src="https://github.com/user-attachments/assets/d43922ec-a6fe-4881-98f5-9044349ed3fb" />
+
+
 Bem-vindo ao **Resume-as-Code (RaC)**. Este não é apenas um conjunto de scripts; é um manifesto sobre como tratar sua carreira e processos seletivos usando princípios de **Engenharia de Software, FinOps e Arquitetura**.
 
 Em vez de disparar currículos genéricos, criamos uma esteira de Integração e Entrega Contínua (CI/CD) para o seu perfil profissional. Sem "Overselling", sem desperdício de energia. Apenas integridade técnica e foco no longo prazo.
