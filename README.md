@@ -36,7 +36,7 @@ Toda vez que o Scanner avalia uma vaga, ele registra os dados num arquivo CSV. I
 
 ---
 
-## 🚀 Como Usar (Getting Started)
+## 🚀 Como Usar
 
 ### 0. Pré-requisitos
 Para o pipeline funcionar localmente, você precisa ter instalado:
@@ -50,8 +50,24 @@ python3 cv_scanner.py vaga_itau.txt
 ```
 > O script avaliará a vaga em Tiers, exibirá o veredicto no terminal e gravará os dados no seu `cv_analytics.csv` para acompanhamento de FinOps pessoal.
 
-### 2. The Single Source of Truth
+### 2. The Single Source of Truth (Fonte Única da Verdade)
 Utilize o `master_cv_template.yaml` como a base central e inalterável da sua carreira. Toda vez que precisar criar um currículo novo, extraia os dados desse YAML e crie um arquivo `.md` específico para a vaga aprovada no passo 1.
+
+**⚠️ Atenção à Formatação do Markdown:**
+Para que o `cv_style.css` e o motor de PDF funcionem com perfeição (com as margens corretas), o seu arquivo `.md` **DEVE** começar com este cabeçalho (Frontmatter):
+
+```yaml
+---
+pdf_options:
+  format: A4
+  margin:
+    top: 18mm
+    bottom: 18mm
+    left: 18mm
+    right: 18mm
+---
+```
+Use `#` (H1) para o seu Nome, `##` (H2) para Seções e `###` (H3) para Cargos/Empresas.
 
 ### 3. Build & Deploy (Gerando o PDF)
 Com o seu arquivo Markdown específico pronto (ex: `cv_cloud_jr.md`), ative o motor de compilação:
